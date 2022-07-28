@@ -49,30 +49,102 @@ p{
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    transition: 0.4s ease;
+    
+}
+
+.logo:hover{
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 #header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 80px;
-    background-color: #a1a7a7;
+    padding: 15px 80px;
+    background-color: #222;
     box-shadow: 0 5px 15px rgb(0, 0, 0, 0.3);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
-.navbar{
+/* Nav bar */
+
+#navbar{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.navbar li{
+#navbar li{
     list-style: none;
     padding: 0 8px;
+    position: relative;
 }
-.navbar li a{
+#navbar li a{
     text-decoration: none;
-    color:black;
+    color: floralwhite;
     font-size: 16px;
     font-weight: 600;
+    transition: 0.4s ease;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color: #618a3d;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: '';
+    width: 30%;
+    height: 2px;
+    background: #618a3d;
+    position: absolute;
+    bottom: -4px;
+    left: 10px;
+
+}
+
+/* homepage */
+
+#home-page{
+    background-image: url("images/rastafari-model.jpg");
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    padding: 0 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#home-page h4{
+    padding-bottom: 15px;
+    color: floralwhite;
+}
+#home-page h2, p{
+    color: floralwhite;
+}
+#home-page h1{
+    color: #618a3d;
+}
+#home-page button{
+    background-image: url("images/button-image.jpg");
+    background-size: cover;
+    padding: 5px 5px;
+    color: #97e752 ;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+    transition: 0.4s ease;
+}
+#home-page button:hover{
+    border-right: 1px #97e752 solid;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
     
